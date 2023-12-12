@@ -6,9 +6,8 @@ function wait(n) {
     return new Promise((resolve)=>{
         setTimeout(()=>{
             resolve();
-        },n);
+        },n*1000);
     })
 }
-const res = wait(5000);
-console.log(res);
-res.then(()=>{console.log("resolved")})
+
+module.exports = wait;
